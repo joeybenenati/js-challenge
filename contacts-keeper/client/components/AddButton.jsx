@@ -22,7 +22,6 @@ AddButton = React.createClass({
       email: this.refs.email.getValue(),
       notes: this.refs.notes.getValue()
     })
-
   },
 
   render() {
@@ -33,6 +32,7 @@ AddButton = React.createClass({
         Contacts Keeper
         <RBS.Modal show={this.state.showModal} onHide={this.closeModal} dialogClassName="contact-form">
           <RBS.Modal.Header>
+            <button className='close close-btn' onClick={this.closeModal}>&times;</button>
             <RBS.Modal.Title>Contacts Keeper</RBS.Modal.Title>
           </RBS.Modal.Header>
           <RBS.Modal.Body>
