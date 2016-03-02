@@ -1,5 +1,15 @@
 App = React.createClass({
 
+  getInitialState() {
+    return { 
+      search: ''
+    };
+  },
+
+  searchInput(event) {
+    this.setState({search: event.target.value})
+  },
+
   render() {
     return (
       <div>
@@ -9,7 +19,7 @@ App = React.createClass({
           <RBS.Row className="show-grid controls">
             <RBS.Col xs={5} sm={4} md={4}>
               <div className="input-group">
-                <input type="text" className="form-control" placeholder="Search"/>
+                <input type="text" className="form-control" onChange={this.searchInput} placeholder="Search"/>
                 <div className="input-group-addon"><RBS.Glyphicon glyph="search" /></div>
               </div>
             </RBS.Col>
@@ -18,7 +28,7 @@ App = React.createClass({
               <AddButton/>
             </RBS.Col>
           </RBS.Row>
-          <Table/>
+          <Table search={this.state.search}/>
         </div>
       </div>
 

@@ -29,7 +29,18 @@ Table = React.createClass({
   },
   
   renderContacts() {
-    var rows = this.data.contacts.map((contact, index) => {
+    var rows = this.data.contacts.filter(contact => { //filter by search input 
+      var searchInput = this.props.search.toLowerCase()
+      if (searchInput) {
+        return contact.firstName.toLowerCase().includes(searchInput) || 
+          contact.lastName.toLowerCase().includes(searchInput) ||
+          contact.email.toLowerCase().includes(searchInput) ||
+          contact.email.toLowerCase().includes(searchInput) ||
+          contact.phone.toLowerCase().includes(searchInput) 
+      } else {
+        return contact
+      }
+    }).map((contact, index) => {
       return <Contact key={index} {...contact} />
     }).sort((a, b) => { // sorts by sort state
       return sortBy[this.state.sort](a.props, b.props, this.state.a_z) /*b.props[this.state.sort] < a.props[this.state.sort]*/ //a-z
