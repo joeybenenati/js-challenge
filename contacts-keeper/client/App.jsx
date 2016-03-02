@@ -17,6 +17,7 @@ App = React.createClass({
               <AddButton/>
             </RBS.Col>
           </RBS.Row>
+          <Table/>
         </div>
       </div>
 
