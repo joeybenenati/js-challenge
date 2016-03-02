@@ -2,7 +2,7 @@ Contact = React.createClass({
 
   getInitialState () {
     return {
-      active: Boolean(this.props.firstName || this.props.lastName)
+      active: this.props.active
     }
   },
 
@@ -10,14 +10,14 @@ Contact = React.createClass({
     return (
       <tr>
         {
-          this.state.active ?
-            <td className='td-remove' id active={this.state.active}><Remove /></td> :
-            <td className='disabled' id active={this.state.active}><Remove /></td>
+          this.props.active ?
+            <td className='td-remove'><Remove contact={this.props}/></td> :
+            <td className='disabled'></td>
         }
         {
-          this.state.active ?
-            <td className='td-edit' active={this.state.active}><Edit /></td> :
-            <td className='disabled' active={this.state.active}><Edit /></td>
+          this.props.active ?
+            <td className='td-edit'><Edit contact={this.props}/></td> :
+            <td></td>
         }
         <td className='td-md'>{this.props.firstName || ''}</td>
         <td className='td-md'>{this.props.lastName || ''}</td>

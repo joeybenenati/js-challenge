@@ -6,6 +6,14 @@ Meteor.methods({
         console.log('failed to add contact: ', err.message)
       }
     })
+  },
+
+  updateContact(contact) {
+
+  },
+
+  deleteContact(contactId) {
+    Contacts.remove({_id: contactId})
   }
 
 })

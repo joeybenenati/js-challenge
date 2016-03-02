@@ -54,7 +54,7 @@ h1 small{
 }
 
 input, .table-bordered, .btn {
-  border-radius: 2px;
+  border-radius: 2px !important;
 }
 
 /***********TABLE*************/
