@@ -57,6 +57,8 @@ Table = React.createClass({
       <RBS.Table bordered>
         <thead>
           <tr>
+            <th><RBS.Glyphicon glyph="remove" /></th>
+            <th><RBS.Glyphicon glyph="pencil" /></th>
             <th><a className='sorted' id='firstName' onClick={this.changeSort}>First Name</a></th>
             <th><a id='lastName' onClick={this.changeSort}>Last Name</a></th>
             <th><a id='dob' onClick={this.changeSort}>Date of Birth</a></th>

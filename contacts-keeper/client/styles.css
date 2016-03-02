@@ -7,7 +7,8 @@ h1 small{
   font-size: 50% !important;
 }
 
-.blue-white, .modal-header, .input-group-addon {
+.blue-white, .modal-header, 
+.input-group-addon {
   background-color: rgb(33, 111, 181);
   color: white;
 }
@@ -60,6 +61,19 @@ input, .table-bordered, .btn {
 
 tr {
   height: 37px;
+}
+
+.td-edit, .td-remove {
+  width: 2%;
+  text-align: center;
+}
+
+.td-edit {
+  color: rgb(33, 111, 181);
+}
+
+.td-remove {
+  color: red;
 }
 
 .td-sm {
