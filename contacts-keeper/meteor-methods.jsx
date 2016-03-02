@@ -8,12 +8,12 @@ Meteor.methods({
     })
   },
 
-  updateContact(contact) {
-
+  updateContact(contact, contactId) {
+    return Contacts.update({_id: contactId}, contact)
   },
 
   deleteContact(contactId) {
-    Contacts.remove({_id: contactId})
+    return Contacts.remove({_id: contactId})
   }
 
 })
