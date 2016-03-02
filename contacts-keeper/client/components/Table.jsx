@@ -1,7 +1,23 @@
 Table = React.createClass({
+
+  mixins:[ReactMeteorData],
+
+  getMeteorData() {
+    return {
+      contacts: Contacts.find().fetch()
+    }
+  },
   
   renderContacts() {
     //map contact data to Contact component
+    var rows = this.data.contacts.map(contact => {
+      return <Contact key={index} {...contact} />
+    })
+
+    while (rows.length < 7) { //minimum 7 table rows showing
+      rows.push(<Contact key={rows.length}/>)
+    }
+    return rows
   },
 
   render() {
