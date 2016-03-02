@@ -27,7 +27,7 @@ AddButton = React.createClass({
   render() {
 
     return (
-      <RBS.Button bsStyle="primary" bsSize="small" onClick={this.openModal} className='float-right'>
+      <RBS.Button bsStyle="primary" bsSize="small" onClick={this.openModal} className='blue-white float-right'>
         <RBS.Glyphicon className='btn-glyph' glyph="plus-sign" />
         Contacts Keeper
         <RBS.Modal show={this.state.showModal} onHide={this.closeModal} dialogClassName="contact-form">

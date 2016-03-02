@@ -1,3 +1,16 @@
+small {
+  color: #fff !important;
+  font-weight: 200 !important;
+}
+
+h1 small{
+  font-size: 50% !important;
+}
+
+.blue-white, .modal-header, .input-group-addon {
+  background-color: rgb(33, 111, 181);
+  color: white;
+}
  /*********HEADER***************/
 
  .page-header {
@@ -7,14 +20,6 @@
   background-color: #f58025;
 }
 
-small {
-  color: #fff !important;
-  font-weight: 200 !important;
-}
-
-h1 small{
-  font-size: 50% !important;
-}
 
 .header-spacer {
   width: 100%;
@@ -34,10 +39,10 @@ h1 small{
   margin-bottom: 20px;
 }
 
-.input-group-addon {
+/*.input-group-addon {
   background-color: #337ab7;
   color: white;
-}
+}*/
 
 .btn-glyph {
   padding-right: 8px;
@@ -72,7 +77,7 @@ tr {
 a, th {
   color: white;
   border: white;
-  background-color: #555;
+  background-color: rgb(103,103,103);
   font-weight: 200;
 }
 
@@ -94,10 +99,10 @@ a:hover {
   width: 60%;
 }
 
-.modal-header {
+/*.modal-header {
   background-color: #337ab7;
   color: white;
-}
+}*/
 
 .modal-title {
   font-weight: 400;
