@@ -12,6 +12,19 @@ AddButton = React.createClass({
     this.setState({ showModal: true })
   },
 
+  saveContact() {
+    this.closeModal()
+    Meteor.call('addContact', {
+      firstName: text.capitalize(this.refs.firstName.getValue()),
+      lastName: text.capitalize(this.refs.lastName.getValue()),
+      dob: this.refs.dob.getValue(),
+      phone: this.refs.phone.getValue(),
+      email: this.refs.email.getValue(),
+      notes: this.refs.notes.getValue()
+    })
+
+  },
+
   render() {
 
     return (
@@ -53,7 +66,7 @@ AddButton = React.createClass({
             </RBS.Row>
           </RBS.Modal.Body>
           <RBS.Modal.Footer>
-            <RBS.Button className='btn-save'>Save</RBS.Button>
+            <RBS.Button className='btn-save' type='submit' onClick={this.saveContact} >Save</RBS.Button>
           </RBS.Modal.Footer>
         </RBS.Modal>
       </RBS.Button>

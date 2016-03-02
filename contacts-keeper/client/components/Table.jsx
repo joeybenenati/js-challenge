@@ -10,7 +10,7 @@ Table = React.createClass({
   
   renderContacts() {
     //map contact data to Contact component
-    var rows = this.data.contacts.map(contact => {
+    var rows = this.data.contacts.map((contact, index) => {
       return <Contact key={index} {...contact} />
     })
 
