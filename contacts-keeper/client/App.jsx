@@ -4,6 +4,7 @@ App = React.createClass({
     return (
       <div>
         <RBS.PageHeader><small>Contacts Keeper</small></RBS.PageHeader>
+        <div className='header-spacer'></div>
         <div className='content'>
           <RBS.Row className="show-grid controls">
             <RBS.Col xs={5} sm={4} md={4}>
