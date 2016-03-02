@@ -32,11 +32,7 @@ Table = React.createClass({
     var rows = this.data.contacts.map((contact, index) => {
       return <Contact key={index} {...contact} />
     }).sort((a, b) => { // sorts by sort state
-      if (this.state.a_z) {
-        return b.props[this.state.sort] < a.props[this.state.sort] //a-z
-      } else {
-        return b.props[this.state.sort] > a.props[this.state.sort] //z-a
-      }
+      return sortBy[this.state.sort](a.props, b.props, this.state.a_z) /*b.props[this.state.sort] < a.props[this.state.sort]*/ //a-z
     })
 
     while (rows.length < 7) { //adds rows to maintain minumum of 7 
@@ -52,7 +48,7 @@ Table = React.createClass({
           <tr>
             <th><a className='sorted' id='firstName' onClick={this.changeSort}>First Name</a></th>
             <th><a id='lastName' onClick={this.changeSort}>Last Name</a></th>
-            <th id='dob'>Date of Birth</th>
+            <th><a id='dob' onClick={this.changeSort}>Date of Birth</a></th>
             <th>Phone</th>
             <th><a id='email' onClick={this.changeSort}>Email</a></th>
             <th>Notes</th>

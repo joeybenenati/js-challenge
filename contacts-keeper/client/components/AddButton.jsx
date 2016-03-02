@@ -47,7 +47,7 @@ AddButton = React.createClass({
             </RBS.Row>
             <RBS.Row className="show-grid">
               <RBS.Col xs={5} md={5} sm={5}>
-                <RBS.Input type="date" label="Date of Birth" ref="dob"/> 
+                <RBS.Input type="text" label="Date of Birth" ref="dob" placeholder='MM/DD/YYYY'/> 
               </RBS.Col>
               <RBS.Col xs={2} md={2} sm={2} />
               <RBS.Col xs={5} md={5} sm={5} >
