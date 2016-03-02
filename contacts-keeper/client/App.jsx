@@ -14,7 +14,7 @@ App = React.createClass({
             </RBS.Col>
             <RBS.Col xs={4} sm={6} md={6}></RBS.Col>
             <RBS.Col xs={3} sm={2} md={2} >
-              <RBS.Button bsStyle='primary' />
+              <AddButton/>
             </RBS.Col>
           </RBS.Row>
         </div>
