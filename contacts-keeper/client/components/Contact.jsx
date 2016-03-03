@@ -9,22 +9,22 @@ Contact = React.createClass({
   render() {
     return (
       <tr>
-        {
+        {/* so remove and edit glyphs don't render for empty rows*/
           this.props.active ?
             <td className='td-remove'><Remove contact={this.props}/></td> :
-            <td className='disabled'></td>
+            <td className='td-remove'></td>
         }
         {
           this.props.active ?
             <td className='td-edit'><Edit contact={this.props}/></td> :
-            <td></td>
+            <td className='td-edit'></td>
         }
-        <td className='td-md'>{this.props.firstName || ''}</td>
-        <td className='td-md'>{this.props.lastName || ''}</td>
-        <td className='td-sm'>{this.props.dob || ''}</td>
-        <td className='td-md'>{this.props.phone || ''}</td>
-        <td className='td-md'>{this.props.email || ''}</td>
-        <td className='td-lg'>{this.props.notes || ''}</td>
+        <td className='td-md'>{this.props.firstName}</td>
+        <td className='td-md'>{this.props.lastName}</td>
+        <td className='td-sm'>{this.props.dob}</td>
+        <td className='td-md'>{this.props.phone}</td>
+        <td className='td-md'>{this.props.email}</td>
+        <td className='td-lg'>{this.props.notes}</td>
       </tr>
     );
   }

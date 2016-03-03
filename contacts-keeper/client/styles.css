@@ -1,3 +1,7 @@
+body {
+  font-family: 'Lato', sans-serif !important;
+} 
+
 small {
   color: #fff !important;
   font-weight: 200 !important;
@@ -12,6 +16,7 @@ h1 small{
   background-color: rgb(33, 111, 181);
   color: white;
 }
+
  /*********HEADER***************/
 
  .page-header {
@@ -20,7 +25,6 @@ h1 small{
   padding: 1px 0px 10px 25px;
   background-color: #f58025;
 }
-
 
 .header-spacer {
   width: 100%;
@@ -39,11 +43,6 @@ h1 small{
 .controls {
   margin-bottom: 20px;
 }
-
-/*.input-group-addon {
-  background-color: #337ab7;
-  color: white;
-}*/
 
 .btn-glyph {
   padding-right: 8px;
@@ -112,11 +111,6 @@ a:hover {
   margin-top: 120px;
   width: 60%;
 }
-
-/*.modal-header {
-  background-color: #337ab7;
-  color: white;
-}*/
 
 .modal-title {
   font-weight: 400;

@@ -19,7 +19,7 @@ Remove = React.createClass({
 
   render () {
     return (
-      <RBS.Glyphicon glyph="remove" onClick={this.showModal}>
+      <RBS.Glyphicon glyph="remove" onClick={this.showModal} className='contact-ctrl'>
         <RBS.Modal show={this.state.showModal} onHide={this.closeModal} dialogClassName="contact-form">
           <RBS.Modal.Header>
             <button className='close close-btn' onClick={this.closeModal}>&times;</button>
