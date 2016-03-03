@@ -51,7 +51,9 @@ The challenge requirements seem vague, am I missing something?
 - Instant search filter for all contact fields
 - Edit and remove existing contacts
 
-Running the app (Meteor must be installed):
+To run the app:
+
+- Meteor must be installed
 
 ```
 cd js-challenge/contacts-keeper
