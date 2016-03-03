@@ -1,0 +1,1 @@
+RBS = require("react-bootstrap")
