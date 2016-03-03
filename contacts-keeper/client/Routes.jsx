@@ -1,3 +1,6 @@
+const {Router, Route, Link, IndexRoute} = ReactRouter
+const history = ReactRouter.history.useQueries(ReactRouter.history.createHistory)();
+
 Routes = React.createClass({
   render() {
     return (
