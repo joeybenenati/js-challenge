@@ -47,7 +47,7 @@ var ContactsKeeper = React.createClass({
               <ContactForm show={this.state.showForm} handleNewContact={this.addContact} close={this.closeForm}/>
             </ReactBootstrap.Col>
           </ReactBootstrap.Row>
-          <Contacts search={this.state.search} records={this.state.contacts}/>
+          <Contacts search={this.state.search} contacts={this.state.contacts}/>
         </div>
       </div>
     )
