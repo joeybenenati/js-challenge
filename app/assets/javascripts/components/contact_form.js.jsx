@@ -19,12 +19,13 @@ var ContactForm = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault()
+    this.props.close()
     var contact = JSON.parse(JSON.stringify(this.state))
-    contact.firstname = capitalize(firstname)
-    contact.lastname = capitalize(lastname)
+    contact.firstname = capitalize(contact.firstname)
+    contact.lastname = capitalize(contact.lastname)
     $.post('', { contact: contact }, data => {
       this.props.handleNewContact(data)
-      this.setIntitialState(this.getInitialState)
+      this.setState(this.getInitialState)
     }, 'JSON')
   },
 

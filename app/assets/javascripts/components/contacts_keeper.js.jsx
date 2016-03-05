@@ -22,7 +22,7 @@ var ContactsKeeper = React.createClass({
 
   addContact: function(contact) {
     var contacts = React.addons.update(this.state.contacts, { $push: [contact] })
-    this.setState(contacts)
+    this.setState( { contacts: contacts })
   },
 
   render: function() {

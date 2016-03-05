@@ -1,12 +1,12 @@
 var Contacts = React.createClass({
   getInitialState: function() {
     return {
-      contacts: this.props.contacts
+      // contacts: this.props.contacts
     }
   },
 
   renderContacts: function() {
-    var contacts = this.state.contacts.map((contact, index) => {
+    var contacts = this.props.contacts.map((contact, index) => {
       return <Contact key={index} active={true} {...contact} />
     })
     while (contacts.length < 7) { //adds rows to maintain minumum of 7 
