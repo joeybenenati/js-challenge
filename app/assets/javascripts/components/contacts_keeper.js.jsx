@@ -25,6 +25,16 @@ var ContactsKeeper = React.createClass({
     this.setState( { contacts: contacts })
   },
 
+  removeContact: function(contact) {
+    var index = this.state.contacts.indexOf(contact)
+    var contacts = React.addons.update(this.state.contacts, { $splice: [[index, 1]]})
+    this.replaceState({ contacts: contacts })
+  },
+
+  updateContact: function() {
+
+  },
+
   render: function() {
     return (
       <div>
@@ -47,7 +57,9 @@ var ContactsKeeper = React.createClass({
               <ContactForm show={this.state.showForm} handleNewContact={this.addContact} close={this.closeForm}/>
             </ReactBootstrap.Col>
           </ReactBootstrap.Row>
-          <Contacts search={this.state.search} contacts={this.state.contacts}/>
+          <Contacts search={this.state.search} contacts={this.state.contacts}
+                    remove={this.removeContact} update={this.updateContact} 
+                    />
         </div>
       </div>
     )

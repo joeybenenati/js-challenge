@@ -7,10 +7,10 @@ var Contacts = React.createClass({
 
   renderContacts: function() {
     var contacts = this.props.contacts.map((contact, index) => {
-      return <Contact key={index} active={true} {...contact} />
+      return <Contact key={index} active={true} contact={contact} remove={this.props.remove} update={this.props.update}/>
     })
     while (contacts.length < 7) { //adds rows to maintain minumum of 7 
-      contacts.push(<Contact key={contacts.length} active={false}/>)
+      contacts.push(<Contact key={contacts.length} contact={{}} active={false} />)
     }
     return contacts
   },

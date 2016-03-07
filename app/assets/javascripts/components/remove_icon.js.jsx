@@ -14,9 +14,20 @@ var RemoveIcon = React.createClass({
 
   deleteContact(){
     this.closeModal()
+    var that = this
+    var url = '/contacts/' + this.props.contact.id
+    $.ajax({
+      method: 'DELETE',
+      url: '/contacts/' + this.props.contact.id,
+      dataType: 'JSON',
+      success: function() {
+        that.props.remove(that.props.contact)
+      }
+    })
   },
 
   render () {
+
     return (
       <ReactBootstrap.Glyphicon glyph="remove" onClick={this.showModal} className='contact-ctrl'>
         <ReactBootstrap.Modal show={this.state.showModal} onHide={this.closeModal} dialogClassName="contact-form">
