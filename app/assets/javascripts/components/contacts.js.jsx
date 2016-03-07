@@ -1,12 +1,32 @@
 var Contacts = React.createClass({
   getInitialState: function() {
     return {
-      // contacts: this.props.contacts
+      sort: 'firstname',
+      a_z: true
+    }
+  },
+
+  changeSort(event) { //changes sort parameter
+    $('.sorted').removeClass('sorted');
+    $('#' + event.target.id).addClass('sorted');
+    if (this.state.sort === event.target.id) { //reverse sort if already on current sort state
+      this.setState({a_z: !this.state.a_z})
+    } else {
+      this.setState({
+        sort: event.target.id,
+        a_z: true
+      })
     }
   },
 
   renderContacts: function() {
-    var contacts = this.props.contacts.map((contact, index) => {
+    var contacts = this.props.contacts.filter(contact => { //filter by seach input
+      if (this.props.search) {
+        return searchFilter(contact, this.props.search)  
+      } else {
+        return contact
+      }
+    }).map((contact, index) => {
       return <Contact key={index} active={true} contact={contact} remove={this.props.remove} update={this.props.update}/>
     })
     while (contacts.length < 7) { //adds blankrows for minimum of 7 
