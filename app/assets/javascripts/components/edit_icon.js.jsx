@@ -1,7 +1,6 @@
 var EditIcon = React.createClass({
 
   getInitialState() {
-    // var contact = this.props.contact
     return { 
       showModal: false,
       contact: this.props.contact
