@@ -13,19 +13,19 @@ function searchFilter(contact, searchInput){
 }
 
 var sortBy = {
-  firstName (a, b, a_z) {
+  firstname (a, b, a_z) {
     if (a_z) {
-      return a.firstName > b.firstName   
+      return a.firstname > b.firstname   
     } else {
-      return a.firstName < b.firstName
+      return a.firstname < b.firstname
     }
   },
 
-  lastName (a, b, a_z) {
+  lastname (a, b, a_z) {
     if (a_z) {
-      return a.lastName > b.lastName   
+      return a.lastname > b.lastname   
     } else {
-      return a.lastName < b.lastName
+      return a.lastname < b.lastname
     }
   },
 

@@ -43,7 +43,7 @@ Table = React.createClass({
     }).map((contact, index) => {
       return <Contact key={index} active={true} {...contact} />
     }).sort((a, b) => { // sorts by sort state
-      return sortBy[this.state.sort](a.props, b.props, this.state.a_z) /*b.props[this.state.sort] < a.props[this.state.sort]*/ //a-z
+      return sortBy[this.state.sort](a.props.contact, b.props.contact, this.state.a_z) /*b.props[this.state.sort] < a.props[this.state.sort]*/ //a-z
     })
 
     while (rows.length < 7) { //adds rows to maintain minumum of 7 
