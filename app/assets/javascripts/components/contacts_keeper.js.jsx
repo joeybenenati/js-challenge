@@ -50,9 +50,9 @@ var ContactsKeeper = React.createClass({
                 <div className="input-group-addon"><ReactBootstrap.Glyphicon glyph="search" /></div>
               </div>
             </ReactBootstrap.Col>
-            <ReactBootstrap.Col xs={4} sm={6} md={6}></ReactBootstrap.Col>
-            <ReactBootstrap.Col xs={3} sm={2} md={2} >
-              <ReactBootstrap.Button bsSize="small" onClick={this.openForm} className='blue-white float-right'>
+            {/*<ReactBootstrap.Col xs={4} sm={6} md={6}></ReactBootstrap.Col>*/}
+            <ReactBootstrap.Col className='add-col' xs={7} sm={8} md={8} >
+              <ReactBootstrap.Button bsSize="small" onClick={this.openForm} className='blue-white btn-add'>
                 <ReactBootstrap.Glyphicon className='btn-glyph' glyph="plus-sign" />
                 Contacts Keeper
               </ReactBootstrap.Button>

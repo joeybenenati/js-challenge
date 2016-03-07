@@ -41,7 +41,7 @@ var EditIcon = React.createClass({
     var contact = this.state.contact
 
     return (
-      <ReactBootstrap.Glyphicon glyph="pencil" onClick={this.openModal} className='contact-ctrl'>
+      <ReactBootstrap.Glyphicon glyph="pencil" onClick={this.openModal} title='Edit' className='contact-ctrl'>
         <ReactBootstrap.Modal show={this.state.showModal} onHide={this.hideModal} dialogClassName="contact-form">
           <ReactBootstrap.Modal.Header>
             <button className='close close-btn' onClick={this.hideModal}>&times;</button>

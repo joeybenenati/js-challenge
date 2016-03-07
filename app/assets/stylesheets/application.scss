@@ -14,3 +14,152 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+$orange: #f58025;
+$blue: rgb(33, 111, 181);
+/*$grey: 
+$red:*/  
+
+body {
+  font-family: 'Lato', sans-serif !important;
+} 
+
+small {
+  color: #fff !important;
+  font-weight: 200 !important;
+}
+
+h1 small{
+  font-size: 60% !important;
+}
+
+.blue-white, .modal-header, 
+.input-group-addon {
+  background-color: rgb(33, 111, 181);
+  color: white;
+}
+
+ /*********HEADER***************/
+
+ .page-header {
+  border: none;
+  margin: 0px;
+  padding: 1px 0px 10px 25px;
+  background-color: $orange;
+}
+
+.header-spacer {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(128,128,128,.3);
+}
+
+/***********CONTENT***********/
+
+.content {
+  margin: 30px 20px 20px 20px;
+}
+
+/***********CONTROLS**********/
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.btn-glyph {
+  padding-right: 8px;
+}
+
+.add-col {
+  text-align: right;
+}
+
+input, .table-bordered, .btn {
+  border-radius: 2px !important;
+}
+
+.contact-ctrl:hover {
+  cursor: pointer;
+}
+
+/***********TABLE*************/
+
+tr {
+  height: 37px;
+}
+
+.td-edit, .td-remove {
+  width: 2%;
+  text-align: center;
+}
+
+.td-edit {
+  color: rgb(33, 111, 181);
+}
+
+.td-remove {
+  color: red;
+}
+
+.td-sm {
+  width: 10%;
+}
+
+.td-md {
+  width: 14%;
+}
+
+.td-lg {
+  width: 20%;
+}
+
+a, th {
+  color: white;
+  border: white;
+  background-color: rgb(103,103,103);
+  font-weight: 200;
+}
+
+a:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.sorted {
+  font-weight: 300;
+  text-decoration: underline;
+ 
+}
+
+/***********MODAL*************/
+
+.contact-form {
+  margin-top: 120px;
+  width: 60%;
+}
+
+.modal-title {
+  font-weight: 400;
+}
+
+.close-btn {
+  background-color: white !important;
+  text-align: center;
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: 200;
+  color: $orange;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  font-family:arial, sans-serif;
+  padding-top:0px;
+  opacity: 1;
+}
+
+.btn-save {
+  background-color: #555;
+  color: white;
+  font-weight: 200;
+}

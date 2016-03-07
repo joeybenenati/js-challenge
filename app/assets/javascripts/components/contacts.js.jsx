@@ -29,10 +29,10 @@ var Contacts = React.createClass({
     }).map((contact, index) => {
       return <Contact key={index} active={true} contact={contact} remove={this.props.remove} update={this.props.update}/>
     }).sort((a, b) => { // sorts by sort state
-      return sortBy[this.state.sort](a.props.contact, b.props.contact, this.state.a_z) //a-z
+      return sortBy[this.state.sort](a.props.contact, b.props.contact, this.state.a_z)
     })
 
-    while (contacts.length < 7) { //adds blankrows for minimum of 7 
+    while (contacts.length < 7) { //adds blank rows for minimum of 7 
       contacts.push(<Contact key={contacts.length} contact={{}} active={false} />)
     }
     return contacts

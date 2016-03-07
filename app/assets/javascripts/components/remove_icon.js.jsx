@@ -29,7 +29,7 @@ var RemoveIcon = React.createClass({
   render () {
 
     return (
-      <ReactBootstrap.Glyphicon glyph="remove" onClick={this.showModal} className='contact-ctrl'>
+      <ReactBootstrap.Glyphicon glyph="remove" onClick={this.showModal} title='Remove' className='contact-ctrl'>
         <ReactBootstrap.Modal show={this.state.showModal} onHide={this.closeModal} dialogClassName="contact-form">
           <ReactBootstrap.Modal.Header>
             <button className='close close-btn' onClick={this.closeModal}>&times;</button>
