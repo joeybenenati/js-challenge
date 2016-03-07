@@ -9,7 +9,7 @@ var Contacts = React.createClass({
     var contacts = this.props.contacts.map((contact, index) => {
       return <Contact key={index} active={true} contact={contact} remove={this.props.remove} update={this.props.update}/>
     })
-    while (contacts.length < 7) { //adds rows to maintain minumum of 7 
+    while (contacts.length < 7) { //adds blankrows for minimum of 7 
       contacts.push(<Contact key={contacts.length} contact={{}} active={false} />)
     }
     return contacts
@@ -22,8 +22,8 @@ var Contacts = React.createClass({
           <tr>
             <th><ReactBootstrap.Glyphicon glyph="remove" /></th>
             <th><ReactBootstrap.Glyphicon glyph="pencil" /></th>
-            <th><a className='sorted' id='firstName' onClick={this.changeSort}>First Name</a></th>
-            <th><a id='lastName' onClick={this.changeSort}>Last Name</a></th>
+            <th><a className='sorted' id='firstname' onClick={this.changeSort}>First Name</a></th>
+            <th><a id='lastname' onClick={this.changeSort}>Last Name</a></th>
             <th><a id='dob' onClick={this.changeSort}>Date of Birth</a></th>
             <th>Phone</th>
             <th><a id='email' onClick={this.changeSort}>Email</a></th>

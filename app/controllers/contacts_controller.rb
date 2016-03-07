@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-
+  protect_from_forgery
   def index 
     @contacts = Contact.all
   end
@@ -17,6 +17,15 @@ class ContactsController < ApplicationController
     @Contact = Contact.find(params[:id])
     @Contact.destroy
     head :no_content
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
+    if @contact.update(contact_params)
+      render json: @contact
+    else
+      render json: @contact.errors, status: :unprocessable_entity
+    end
   end
 
   private

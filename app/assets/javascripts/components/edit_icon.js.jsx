@@ -1,23 +1,15 @@
 var EditIcon = React.createClass({
 
   getInitialState() {
-    var contact = this.props.contact
+    // var contact = this.props.contact
     return { 
       showModal: false,
-      contact: {
-        firstname: contact.firstname,
-        lastname: contact.lastname,
-        dob: contact.dob,
-        phone: contact.phone,
-        email: contact.email,
-        notes: contact.notes
-      }
+      contact: this.props.contact
     }
   },
 
   hideModal: function() {
     this.setState(this.getInitialState)
-    // this.setState({ showModal: false })
   },
 
   openModal: function() {
@@ -30,17 +22,20 @@ var EditIcon = React.createClass({
     this.setState({contact: contact})
   },
 
-  updateContact: function(e){
+  handleSubmit: function(e){
     e.preventDefault()
-    this.closeModal()
-    // Meteor.call('updateContact', {
-    //   firstName: text.capitalize(this.refs.firstName.getValue()),
-    //   lastName: text.capitalize(this.refs.lastName.getValue()),
-    //   dob: this.refs.dob.getValue(),
-    //   phone: this.refs.phone.getValue(),
-    //   email: this.refs.email.getValue(),
-    //   notes: this.refs.notes.getValue()
-    // }, this.props.contact._id)
+    var data = { contact: this.state.contact }
+    $.ajax({
+      method: 'PUT',
+      url: /contacts/ + this.props.contact.id,
+      dataType: 'JSON',
+      contentType: 'application/json',
+      data: JSON.stringify(data),
+      success: data => {
+        this.props.update(this.props.contact, data)
+        this.hideModal()
+      }
+    })
   },
 
   render: function() {
@@ -91,7 +86,7 @@ var EditIcon = React.createClass({
             <ReactBootstrap.Row className="show-grid">
               <ReactBootstrap.Col xs={12} md={12} sm={12}>
                 <ReactBootstrap.Input type="textarea" label="Notes" name="notes" 
-                                      value={contact.notes} onChange={this.handleChange}
+                                      value={contact.notes} onChange={this.handleChange} 
                                       /> 
               </ReactBootstrap.Col>
             </ReactBootstrap.Row>

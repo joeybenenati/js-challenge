@@ -20,19 +20,21 @@ var ContactsKeeper = React.createClass({
     this.setState({ search: e.target.value.toLowerCase() })
   },
 
-  addContact: function(contact) {
+  addContact: function(contact) { // adds contact to state
     var contacts = React.addons.update(this.state.contacts, { $push: [contact] })
     this.setState( { contacts: contacts })
   },
 
-  removeContact: function(contact) {
+  removeContact: function(contact) { //removes contact from state
     var index = this.state.contacts.indexOf(contact)
     var contacts = React.addons.update(this.state.contacts, { $splice: [[index, 1]]})
     this.replaceState({ contacts: contacts })
   },
 
-  updateContact: function() {
-
+  updateContact: function(contact, data) { //updates state
+    var index = this.state.contacts.indexOf(contact)
+    contacts = React.addons.update(this.state.contacts, {$splice: [[index, 1, data]]})
+    this.replaceState({ contacts: contacts})
   },
 
   render: function() {
