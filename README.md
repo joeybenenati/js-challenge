@@ -53,11 +53,9 @@ The challenge requirements seem vague, am I missing something?
 
 To run the app:
 
-- Meteor must be installed
-
 ```
-cd js-challenge/contacts-keeper
-meteor
+cd js-challenge
+rails server
 
 ```
 - Browse to http://localhost:3000
