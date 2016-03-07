@@ -4,6 +4,11 @@ function capitalize (str) {
   }).join(' ')
 }
 
-function searchFilter(contact){
-  
+function searchFilter(contact, searchInput){
+  return contact.firstname.toLowerCase().includes(searchInput) || 
+    contact.lastname.toLowerCase().includes(searchInput) ||
+    contact.email.toLowerCase().includes(searchInput) ||
+    contact.email.toLowerCase().includes(searchInput) ||
+    contact.phone.toLowerCase().includes(searchInput) 
 }
+

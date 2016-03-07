@@ -16,8 +16,8 @@ var ContactsKeeper = React.createClass({
     this.setState( { showForm: false })
   },
 
-  searchInput: function() {
-
+  searchInput: function(e) {
+    this.setState({ search: e.target.value.toLowerCase() })
   },
 
   addContact: function(contact) {

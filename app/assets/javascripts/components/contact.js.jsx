@@ -1,22 +1,22 @@
 var Contact = React.createClass({
 
-  getInitialState: function() {
-    return {
-      active: this.props.active
-    }
-  },
+  // getInitialState: function() {
+  //   return {
+  //     active: this.props.active
+  //   }
+  // },
 
   render: function() {
     return (
       <tr>
-        {/* emove and edit glyphs don't render for empty rows*/
+        {/* remove and edit glyphs don't render for empty rows*/
           this.props.active ?
-            <td className='td-remove'>{/*<Remove contact={this.props}/>*/}</td> :
+            <td className='td-remove'><RemoveIcon contact={this.props}/></td> :
             <td className='td-remove'></td>
         }
         {
           this.props.active ?
-            <td className='td-edit'>{/*<Edit contact={this.props}/>*/}</td> :
+            <td className='td-edit'><EditIcon contact={this.props}/></td> :
             <td className='td-edit'></td>
         }
         <td className='td-md'>{this.props.firstname}</td>
