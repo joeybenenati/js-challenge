@@ -58,6 +58,6 @@ cd js-challenge
 rails server
 
 ```
-- Browse to http://localhost:3000
+- Browse to http://localhost:3000/contacts
 
 
